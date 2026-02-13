@@ -1,391 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TrailTrustTravel - Discover Nepal One Trail at a Time</title>
-  <meta name="description" content="Guided trekking experiences across the Himalayas—safe, responsible, and unforgettable. Book your Nepal trek today.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <!-- Navigation -->
-  <nav class="navbar" id="navbar">
-    <div class="nav-container">
-      <a href="#" class="logo">
-        <svg class="logo-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M8 3l4 8 5-5 5 15H2L8 3z"/>
-        </svg>
-        <span>TRAILTRUST</span>
-      </a>
-      <ul class="nav-links" id="navLinks">
-        <li><a href="#home" class="active">Home</a></li>
-        <li><a href="#treks">Treks</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li><a href="#booking" class="btn-primary">Book Now</a></li>
-      </ul>
-      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Toggle menu">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
-    </div>
-  </nav>
-
-  <!-- Mobile Menu -->
-  <div class="mobile-menu" id="mobileMenu">
-    <ul>
-      <li><a href="#home">Home</a></li>
-      <li><a href="#treks">Treks</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#contact">Contact</a></li>
-      <li><a href="#booking" class="btn-primary">Book Now</a></li>
-    </ul>
-  </div>
-
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-bg">
-      <img src="images/hero-mountain.jpg" alt="Himalayan mountains at sunrise">
-      <div class="hero-overlay"></div>
-    </div>
-    <div class="hero-content">
-      <p class="hero-tagline">Discover Nepal</p>
-      <h1 class="hero-title">One Trail<br><span class="accent">At A Time</span></h1>
-      <p class="hero-description">
-        Guided trekking experiences across the Himalayas—safe, responsible, and unforgettable. 
-        Your adventure begins here.
-      </p>
-      <div class="hero-buttons">
-        <a href="#treks" class="btn-primary">Explore Top Trails</a>
-        <a href="#booking" class="btn-secondary">Book Your Trek</a>
-      </div>
-    </div>
-    <div class="scroll-indicator">
-      <span>Scroll to Explore</span>
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-        <path d="M7 13l5 5 5-5M7 6l5 5 5-5"/>
-      </svg>
-    </div>
-  </section>
-
-  <!-- Featured Treks Section -->
-  <section id="treks" class="featured-treks">
-    <div class="container">
-      <div class="section-header">
-        <div>
-          <p class="section-tagline">Featured Treks</p>
-          <h2 class="section-title">Most Popular<br><span class="muted">Adventures</span></h2>
-        </div>
-        <a href="#all-treks" class="link-arrow">View All Treks 
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M5 12h14M12 5l7 7-7 7"/>
-          </svg>
-        </a>
-      </div>
-
-      <div class="trek-cards" id="featuredTreks">
-        <!-- Cards will be populated by JavaScript -->
-      </div>
-    </div>
-  </section>
-
-  <!-- All Treks Section -->
-  <section id="all-treks" class="all-treks">
-    <div class="container">
-      <div class="section-header center">
-        <p class="section-tagline">Top 10 Ranking</p>
-        <h2 class="section-title">Nepal's Best<br><span class="muted">Trekking Trails</span></h2>
-        <p class="section-description">
-          From the iconic Everest Base Camp to hidden gems in remote valleys, 
-          discover the most spectacular trekking routes in the Himalayas.
-        </p>
-      </div>
-
-      <div class="filters">
-        <div class="search-box">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/>
-          </svg>
-          <input type="text" id="searchInput" placeholder="Search treks...">
-        </div>
-        <div class="filter-buttons">
-          <button class="filter-btn active" data-filter="all">All</button>
-          <button class="filter-btn" data-filter="Easy">Easy</button>
-          <button class="filter-btn" data-filter="Moderate">Moderate</button>
-          <button class="filter-btn" data-filter="Hard">Hard</button>
-          <button class="filter-btn" data-filter="Extreme">Extreme</button>
-        </div>
-      </div>
-
-      <div class="trek-grid" id="allTreks">
-        <!-- Cards will be populated by JavaScript -->
-      </div>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about" class="about">
-    <div class="container">
-      <div class="about-grid">
-        <div class="about-image">
-          <img src="images/about-nepal.jpg" alt="Nepal landscape with temple and mountains">
-          <div class="stats-card">
-            <div class="stat">
-              <span class="stat-value">10+</span>
-              <span class="stat-label">Years Experience</span>
-            </div>
-            <div class="stat">
-              <span class="stat-value">5000+</span>
-              <span class="stat-label">Happy Trekkers</span>
-            </div>
-          </div>
-        </div>
-        <div class="about-content">
-          <p class="section-tagline">Why Choose Us</p>
-          <h2 class="section-title">Your Trusted Partner<br><span class="muted">In The Himalayas</span></h2>
-          <p class="about-text">
-            Nepal is home to eight of the world's fourteen highest peaks, including Mount Everest. 
-            With over a decade of experience, we've guided thousands of trekkers through these 
-            majestic landscapes, creating memories that last a lifetime.
-          </p>
-          <div class="features">
-            <div class="feature">
-              <div class="feature-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/>
-                </svg>
-              </div>
-              <div>
-                <h4>Expert Guides</h4>
-                <p>Certified local guides with decades of Himalayan experience.</p>
-              </div>
-            </div>
-            <div class="feature">
-              <div class="feature-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
-                </svg>
-              </div>
-              <div>
-                <h4>Safe Adventures</h4>
-                <p>Comprehensive safety protocols and emergency support.</p>
-              </div>
-            </div>
-            <div class="feature">
-              <div class="feature-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/>
-                  <path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/>
-                </svg>
-              </div>
-              <div>
-                <h4>Local Communities</h4>
-                <p>We support local porters, teahouses, and villages.</p>
-              </div>
-            </div>
-            <div class="feature">
-              <div class="feature-icon">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/>
-                </svg>
-              </div>
-              <div>
-                <h4>Eco-Friendly</h4>
-                <p>Leave-no-trace principles and sustainable practices.</p>
-              </div>
-            </div>
-          </div>
-          <a href="#about-more" class="btn-primary">Learn More About Nepal</a>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Trek Detail Modal -->
-  <div class="modal" id="trekModal">
-    <div class="modal-content">
-      <button class="modal-close" id="modalClose" aria-label="Close modal">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <path d="M18 6L6 18M6 6l12 12"/>
-        </svg>
-      </button>
-      <div class="modal-body" id="modalBody">
-        <!-- Content populated by JavaScript -->
-      </div>
-    </div>
-  </div>
-
-  <!-- Booking Section -->
-  <section id="booking" class="booking">
-    <div class="container">
-      <div class="booking-grid">
-        <div class="booking-info">
-          <p class="section-tagline">Start Your Journey</p>
-          <h2 class="section-title">Book Your Trek</h2>
-          <p class="booking-description">
-            Fill in the details below and we'll get back to you within 24 hours with 
-            a personalized itinerary and quote.
-          </p>
-          <div class="contact-info">
-            <div class="contact-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
-                <path d="M22 6l-10 7L2 6"/>
-              </svg>
-              <span>rajyesnt@gmail.com</span>
-            </div>
-            <div class="contact-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
-              </svg>
-              <span>+977 980 000 0000</span>
-            </div>
-            <div class="contact-item">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
-              </svg>
-              <span>Kushma, Parbat, Nepal</span>
-            </div>
-          </div>
-        </div>
-
-        <form class="booking-form" id="bookingForm">
-          <div class="form-group">
-            <label for="fullName">Full Name *</label>
-            <input type="text" id="fullName" name="fullName" required placeholder=" ">
-          </div>
-          <div class="form-group">
-            <label for="email">Email Address *</label>
-            <input type="email" id="email" name="email" required placeholder=" ">
-          </div>
-          <div class="form-group">
-            <label for="phone">Phone Number *</label>
-            <input type="tel" id="phone" name="phone" required placeholder="  ">
-          </div>
-          <div class="form-group">
-            <label for="nationality">Nationality *</label>
-            <input type="text" id="nationality" name="nationality" required placeholder="  ">
-          </div>
-          <div class="form-group">
-            <label for="trek">Select Trek *</label>
-            <select id="trek" name="trek" required>
-              <option value="">Select a trek</option>
-            </select>
-          </div>
-          <div class="form-group">
-            <label for="startDate">Preferred Start Date *</label>
-            <input type="date" id="startDate" name="startDate" required>
-          </div>
-          <div class="form-group">
-            <label for="people">Number of People *</label>
-            <input type="number" id="people" name="people" min="1" max="20" value="1" required>
-          </div>
-          <div class="form-group full-width">
-            <label for="requests">Special Requests (Optional)</label>
-            <textarea id="requests" name="requests" rows="4" placeholder="Any dietary requirements, medical conditions, or special requests..."></textarea>
-          </div>
-          <button type="submit" class="btn-primary full-width" id="submitBtn">
-            Submit Booking Request
-          </button>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- Booking Success Modal -->
-  <div class="modal success-modal" id="successModal">
-    <div class="modal-content success-content">
-      <div class="success-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3">
-          <path d="M20 6L9 17l-5-5"/>
-        </svg>
-      </div>
-      <h2>Booking Request Received!</h2>
-      <p>Thank you for booking with TrailTrustTravel. We've sent a confirmation email with your booking details. Our team will contact you within 24 hours.</p>
-      <button class="btn-primary" id="successClose">Continue Exploring</button>
-    </div>
-  </div>
-
-  <!-- Contact Section -->
-  <section id="contact" class="contact">
-    <div class="container">
-      <div class="section-header center">
-        <p class="section-tagline">Get In Touch</p>
-        <h2 class="section-title">Contact Us</h2>
-        <p class="section-description">
-          Have questions about trekking in Nepal? We're here to help you plan your perfect Himalayan adventure.
-        </p>
-      </div>
-
-      <div class="contact-grid">
-        <div class="contact-form-wrapper">
-          <form class="contact-form" id="contactForm">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="contactName">Your Name *</label>
-                <input type="text" id="contactName" name="name" required placeholder=" ">
-              </div>
-              <div class="form-group">
-                <label for="contactEmail">Email Address *</label>
-                <input type="email" id="contactEmail" name="email" required placeholder=" ">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="contactSubject">Subject *</label>
-              <select id="contactSubject" name="subject" required>
-                <option value="">Select a subject</option>
-                <option value="general">General Inquiry</option>
-                <option value="booking">Booking Question</option>
-                <option value="trek">Trek Information</option>
-                <option value="custom">Custom Itinerary</option>
-                <option value="other">Other</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="contactMessage">Message *</label>
-              <textarea id="contactMessage" name="message" rows="5" required placeholder="How can we help you?"></textarea>
-            </div>
-            <button type="submit" class="btn-primary">Send Message</button>
-          </form>
-        </div>
-
-        <div class="contact-info-panel">
-          <div class="info-card">
-            <h3>Quick Response Guarantee</h3>
-            <p>We aim to respond to all inquiries within 24 hours. For urgent matters, please call us directly.</p>
-          </div>
-          <div class="social-links">
-            <h3>Follow Us</h3>
-            <div class="social-icons">
-              <a href="#" aria-label="Instagram">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-                  <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-                </svg>
-              </a>
-              <a href="#" aria-label="Facebook">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-                </svg>
-              </a>
-              <a href="#" aria-label="Twitter">
-                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
-                </svg>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Footer -->
-  <footer class="footer">
+<footer class="footer">
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
@@ -396,69 +9,54 @@
             <span>TRAILTRUST</span>
           </a>
           <p>Discover Nepal one trail at a time. Guided trekking experiences across the Himalayas—safe, responsible, and unforgettable.</p>
-          <!DOCTYPE html>
-<html>
-<head>
-<style>
-  /* 1. Layout & Spacing */
-  .social-icons {
-    display: flex;
-    gap: 1.5rem;          /* Space between icons */
-    align-items: center;
-    padding: 10px 0;
-  }
+          
+          <style>
+            /* Ideally, move these styles to your styles.css file */
+            .social-icons {
+              display: flex;
+              gap: 1.5rem;
+              align-items: center;
+              padding: 10px 0;
+            }
+            .social-icons a {
+              color: #333; /* Default icon color (Dark Grey) - adjust for dark footer if needed */
+              transition: transform 0.2s ease, color 0.3s ease;
+              display: inline-flex;
+            }
+            .social-icons svg {
+              width: 24px;
+              height: 24px;
+            }
+            .social-icons a:hover {
+              transform: translateY(-3px);
+            }
+            .social-icons a[aria-label="Instagram"]:hover { color: #E1306C; }
+            .social-icons a[aria-label="Facebook"]:hover  { color: #1877F2; }
+            .social-icons a[aria-label="Twitter"]:hover   { color: #1DA1F2; }
+          </style>
 
-  /* 2. Link Styling */
-  .social-icons a {
-    color: #333;          /* Default icon color (Dark Grey) */
-    transition: transform 0.2s ease, color 0.3s ease;
-    display: inline-flex;
-  }
+          <div class="social-icons">
+            <a href="https://www.instagram.com/raj__yes" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+              </svg>
+            </a>
 
-  /* 3. SVG Size */
-  .social-icons svg {
-    width: 24px;
-    height: 24px;
-  }
+            <a href="https://www.facebook.com/Rajyesnt" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+              </svg>
+            </a>
 
-  /* 4. Hover Animations */
-  .social-icons a:hover {
-    transform: translateY(-3px); /* Subtle float up effect */
-  }
-
-  /* 5. Brand Colors on Hover */
-  .social-icons a[aria-label="Instagram"]:hover { color: #E1306C; }
-  .social-icons a[aria-label="Facebook"]:hover  { color: #1877F2; }
-  .social-icons a[aria-label="Twitter"]:hover   { color: #1DA1F2; }
-</style>
-</head>
-<body>
-
-<div class="social-icons">
-  <a href="https://www.instagram.com/raj__yes" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
-      <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
-      <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
-    </svg>
-  </a>
-
-  <a href="https://www.facebook.com/Rajyesnt" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
-    </svg>
-  </a>
-
-  <a href="https://twitter.com/raj__yes" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-      <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
-    </svg>
-  </a>
-</div>
-
-</body>
-</html>
-        <div class="footer-links">
+            <a href="https://twitter.com/raj__yes" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"/>
+              </svg>
+            </a>
+          </div>
+          </div> <div class="footer-links">
           <h4>Quick Links</h4>
           <ul>
             <li><a href="#home">Home</a></li>
@@ -510,8 +108,4 @@
         </div>
       </div>
     </div>
-  </footer>
-
-  <script src="app.js"></script>
-</body>
-</html>
+</footer>
